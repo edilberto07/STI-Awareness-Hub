@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, Clock, User, Play, ChevronDown, ChevronUp, Shield } from 'lucide-react';
 import { Article, articles as allArticles, CATEGORY_COLORS } from '@/data/articles';
+import YouTubeVideo from './YouTubeVideo';
 
 interface ArticlePageProps {
   article: Article;
@@ -86,37 +87,17 @@ function HealthTipsSidebar({ tips, category }: { tips: string[]; category: strin
   );
 }
 
-function VideoPlayer({ embedUrl }: { embedUrl: string }) {
-  const [playing, setPlaying] = useState(false);
-  const colors = CATEGORY_COLORS['Prevention'];
-
+function VideoPlayer({ videoId, videoTitle }: { videoId?: string; videoTitle?: string }) {
+  if (!videoId) return null;
+  
   return (
-    <div className="my-10 rounded-2xl overflow-hidden bg-[#0D4F5C] relative aspect-video group">
-      {!playing ? (
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-          <button
-            onClick={() => setPlaying(true)}
-            className="w-16 h-16 rounded-full bg-white flex items-center justify-center hover:scale-105 transition-transform shadow-xl"
-            aria-label="Play video"
-          >
-            <Play size={24} className="text-[#0D4F5C] ml-1" fill="#0D4F5C" />
-          </button>
-          <p
-            className="text-white/60 text-sm"
-            style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}
-          >
-            Click to play video
-          </p>
-        </div>
-      ) : (
-        <iframe
-          src={embedUrl + '?autoplay=1&rel=0'}
-          title="Article video"
-          className="w-full h-full"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      )}
+    <div className="my-10 rounded-2xl overflow-hidden">
+      <YouTubeVideo 
+        videoId={videoId} 
+        title={videoTitle || 'Related Video'}
+        description="Watch this educational video to learn more about this topic."
+        className="w-full"
+      />
     </div>
   );
 }
@@ -234,7 +215,7 @@ export default function ArticlePage({ article, onBack, onRelatedClick }: Article
 
             {/* Article body */}
             <div className="bg-white rounded-3xl p-8 lg:p-12 mb-8 shadow-sm">
-              {article.videoEmbed && <VideoPlayer embedUrl={article.videoEmbed} />}
+              {article.videoId && <VideoPlayer videoId={article.videoId} videoTitle={article.videoTitle} />}
               <div
                 className="article-body"
                 dangerouslySetInnerHTML={{ __html: article.content }}

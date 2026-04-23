@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import TopicCards from './TopicCards';
 import FeaturedArticle from './FeaturedArticle';
+import FeaturedVideo from './FeaturedVideo';
 import ArticleGrid from './ArticleGrid';
 import ArticlePage from './ArticlePage';
 import Footer from './Footer';
@@ -61,10 +62,13 @@ export default function Home() {
         <Hero onExplore={handleExploreClick} />
         <TopicCards onCategoryChange={handleCategoryChange} />
         {activeCategory === 'All' && (
-          <FeaturedArticle
-            article={featuredArticle}
-            onRead={handleArticleSelect}
-          />
+          <>
+            <FeaturedArticle
+              article={featuredArticle}
+              onRead={handleArticleSelect}
+            />
+            <FeaturedVideo onExplore={handleExploreClick} />
+          </>
         )}
         <div ref={articlesRef}>
           <ArticleGrid
