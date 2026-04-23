@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, Clock, User, Play, ChevronDown, ChevronUp, Shield } from 'lucide-react';
+import { ArrowLeft, Clock, User, ChevronDown, ChevronUp, Shield } from 'lucide-react';
 import { Article, articles as allArticles, CATEGORY_COLORS } from '@/data/articles';
 import YouTubeVideo from './YouTubeVideo';
 

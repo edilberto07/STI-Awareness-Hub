@@ -131,8 +131,8 @@ export const articles: Article[] = [
 <h2>Getting Tested</h2>
 <p>Regular HIV testing is recommended for sexually active individuals. Testing is fast, confidential, and widely available. The CDC recommends HIV testing at least once a year for people who have risk factors, and more frequently (every 3–6 months) for those with higher-risk behaviors.</p>
     `,
-    videoId: 'evsxNJ8exEE',
-    videoTitle: 'Understanding HIV: Modern Treatment & Prevention',
+    videoId: 'JY1qi3bf-Os',
+    videoTitle: 'HIV Basics: Testing, Prevention, and Living with HIV',
     relatedIds: ['2', '4', '5'],
     healthTips: [
       'Get tested for HIV regularly — at least once a year',
@@ -189,7 +189,7 @@ export const articles: Article[] = [
 <p>The good news: gonorrhea is curable with antibiotics. The current recommended treatment is a single injection of ceftriaxone. Due to rising antibiotic resistance, it's critical to complete treatment as directed and not take leftover antibiotics from other conditions.</p>
 <p>Be aware that antibiotic-resistant gonorrhea strains are a growing concern globally. This is why proper treatment and following up with your healthcare provider is essential.</p>
     `,
-    videoId: 'R_YxXJpRjd0',
+    videoId: '5bpoUHZx4V4',
     videoTitle: 'Gonorrhea: Symptoms, Testing & Treatment',
   },
   {
@@ -233,7 +233,7 @@ export const articles: Article[] = [
 <p>Early-stage syphilis is curable with a single intramuscular injection of benzathine penicillin G. Later stages may require multiple doses over several weeks. For those with penicillin allergies, alternative antibiotics are available.</p>
 <p>Partner notification is critical — all sexual partners from the past 90 days (for primary syphilis) or one year (for secondary syphilis) should be notified and tested.</p>
     `,
-    videoId: 'jX3YkRz0lq0',
+    videoId: 'foUUeARe2f8',
     videoTitle: 'Syphilis: Stages, Testing & Treatment',
   },
   {
@@ -281,7 +281,7 @@ export const articles: Article[] = [
 <h2>Getting Started</h2>
 <p>To start PrEP, you'll need a prescription from a healthcare provider. They'll test you for HIV first (you must be HIV-negative to start PrEP), as well as kidney function and other STIs. You'll need to return every 3 months for HIV testing and prescription renewal while on PrEP.</p>
     `,
-    videoId: 'P_mKjfPhOec',
+    videoId: 'Jay1yWSiXE8',
     videoTitle: 'PrEP: HIV Prevention Guide',
   },
   {
@@ -322,7 +322,7 @@ export const articles: Article[] = [
 <h2>Condoms and STI Prevention</h2>
 <p>Condoms are highly effective against STIs spread through fluids like HIV, gonorrhea, and chlamydia. They are less effective against STIs spread through skin-to-skin contact (like herpes and HPV), but still provide significant protection by covering the areas most likely to shed the virus.</p>
     `,
-    videoId: 'ScFV2m5qDTk',
+    videoId: 'h6iYBRY_mis',
     videoTitle: 'Condom Use Guide: Effectiveness & Best Practices',
   },
   {
@@ -373,7 +373,7 @@ export const articles: Article[] = [
 <h2>Understanding Your Results</h2>
 <p>A negative result means no infection was detected — but remember there is a "window period" for some STIs (especially HIV) where very recent infections may not yet be detectable. A positive result means you should follow up with a healthcare provider promptly for treatment. Most STIs are very treatable, and many are curable.</p>
     `,
-    videoId: 'I2o0u2w9v4c',
+    videoId: 'CJv300pOuNw',
     videoTitle: 'Complete STI Testing Guide: What You Need to Know',
   },
 ];

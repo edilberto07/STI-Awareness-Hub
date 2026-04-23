@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Play, AlertCircle } from 'lucide-react';
+import { useState } from 'react';
+import { Play } from 'lucide-react';
 
 interface YouTubeVideoProps {
   videoId: string;
@@ -15,35 +15,13 @@ export default function YouTubeVideo({
   className = '',
 }: YouTubeVideoProps) {
   const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
 
   const handleLoad = () => {
     setIsLoading(false);
   };
 
-  const handleError = () => {
-    setHasError(true);
-    setIsLoading(false);
-  };
-
   if (!videoId) {
     return null;
-  }
-
-  if (hasError) {
-    return (
-      <div className={`rounded-lg bg-amber-50 border border-amber-200 p-6 ${className}`}>
-        <div className="flex gap-3 items-start">
-          <AlertCircle className="text-amber-700 flex-shrink-0 mt-0.5" size={20} />
-          <div>
-            <h4 className="font-semibold text-amber-900">Video unavailable</h4>
-            <p className="text-sm text-amber-800 mt-1">
-              The video could not be loaded. Please check your internet connection or try again later.
-            </p>
-          </div>
-        </div>
-      </div>
-    );
   }
 
   return (
@@ -61,13 +39,13 @@ export default function YouTubeVideo({
         )}
         <iframe
           className="absolute top-0 left-0 w-full h-full rounded-xl"
-          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=0`}
+          src={`https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=0`}
           title={title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          referrerPolicy="strict-origin-when-cross-origin"
           onLoad={handleLoad}
-          onError={handleError}
         />
       </div>
       {title && (

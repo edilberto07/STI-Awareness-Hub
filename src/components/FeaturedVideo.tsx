@@ -22,9 +22,9 @@ export default function FeaturedVideo({ onExplore }: FeaturedVideoProps) {
         {/* Video */}
         <div className="animate-fade-slide-up stagger-1">
           <YouTubeVideo
-            videoId="evsxNJ8exEE"
-            title="Understanding HIV: Modern Treatment & Prevention"
-            description="Learn about HIV transmission, antiretroviral therapy, PrEP, and how people with HIV can live healthy lives with an undetectable viral load."
+            videoId="JY1qi3bf-Os"
+            title="HIV Basics: Testing, Prevention, and Living with HIV"
+            description="Learn about HIV transmission, testing, prevention, and living well with modern treatment options."
           />
         </div>
 
